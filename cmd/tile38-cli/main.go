@@ -44,7 +44,7 @@ type connError struct {
 var (
 	hostname   = "127.0.0.1"
 	output     = "json"
-	port       = 9851
+	port       = 9470
 	oneCommand string
 	raw        bool
 	noprompt   bool
@@ -59,8 +59,8 @@ func showHelp() bool {
 	} else {
 		gitsha = " (git:" + core.GitSHA + ")"
 	}
-	fmt.Fprintf(os.Stdout, "tile38-cli %s%s\n\n", core.Version, gitsha)
-	fmt.Fprintf(os.Stdout, "Usage: tile38-cli [OPTIONS] [cmd [arg [arg ...]]]\n")
+	fmt.Fprintf(os.Stdout, "fluentbase-cli %s%s\n\n", core.Version, gitsha)
+	fmt.Fprintf(os.Stdout, "Usage: fluentbase-cli [OPTIONS] [cmd [arg [arg ...]]]\n")
 	fmt.Fprintf(os.Stdout, " --raw              Use raw formatting for replies (default when STDOUT is not a tty)\n")
 	fmt.Fprintf(os.Stdout, " --noprompt         Do not display a prompt\n")
 	fmt.Fprintf(os.Stdout, " --tty              Force TTY\n")
