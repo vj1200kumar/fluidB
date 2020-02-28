@@ -21,7 +21,6 @@ test: all
 
 package:
 	@rm -rf packages/
-	@scripts/package.sh Windows windows amd64
 	@scripts/package.sh Mac     darwin  amd64
 	@scripts/package.sh Linux   linux   amd64
 	@scripts/package.sh FreeBSD freebsd amd64
