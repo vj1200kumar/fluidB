@@ -390,17 +390,14 @@ Developer Options:
 		}
 	}()
 
-	//  _____ _ _     ___ ___
-	// |_   _|_| |___|_  | . |
-	//   | | | | | -_|_  | . |
-	//   |_| |_|_|___|___|___|
+	
 	fmt.Fprintf(logw, `
    _______ _______
   |       |       |
-  |____   |   _   |   Tile38 %s%s %d bit (%s/%s)
+  |____   |   _   |   Fluentbase %s%s %d bit (%s/%s)
   |       |       |   %sPort: %d, PID: %d
   |____   |   _   | 
-  |       |       |   tile38.com
+  |       |       |   https://fluentbase.org
   |_______|_______| 
 `+"\n", core.Version, gitsha, strconv.IntSize, runtime.GOARCH, runtime.GOOS, hostd, port, os.Getpid())
 	if pidferr != nil {
