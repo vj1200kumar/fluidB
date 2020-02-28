@@ -132,7 +132,7 @@ func Serve(host string, port int, dir string, http bool) error {
 	if core.QueueFileName == "" {
 		core.QueueFileName = path.Join(dir, "queue.db")
 	}
-	log.Infof("Server started, Tile38 version %s, git %s", core.Version, core.GitSHA)
+	log.Infof("Server started, Fluentbase version %s, git %s", core.Version, core.GitSHA)
 
 	// Initialize the server
 	server := &Server{
