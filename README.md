@@ -14,7 +14,7 @@ Fluentbase is an open source (MIT licensed), in-memory geolocation data store, s
 <a href="#searching"><img src="/img/search-nearby.png" alt="Nearby" border="0" width="120" height="120"></a>
 <a href="#searching"><img src="/img/search-within.png" alt="Within" border="0" width="120" height="120"></a>
 <a href="#searching"><img src="/img/search-intersects.png" alt="Intersects" border="0" width="120" height="120"></a>
-<a href="https://fluentbase.org/topics/roaming-geofences"><img src="/img/assets/roaming.gif" alt="Roaming Geofences" border="0" width="120" height="120"></a>
+<a href="https://fluentbase.org/topics/roaming-geofences"><img src="/img/roaming.gif" alt="Roaming Geofences" border="0" width="120" height="120"></a>
 </p>
 
 ## Features
