@@ -256,7 +256,7 @@ Developer Options:
 	}
 	os.Args = nargs
 
-	flag.IntVar(&port, "p", 9851, "The listening port.")
+	flag.IntVar(&port, "p", 9470, "The listening port.")
 	flag.StringVar(&pidfile, "pidfile", "", "A file that contains the pid")
 	flag.StringVar(&host, "h", "", "The listening host.")
 	flag.StringVar(&dir, "d", "data", "The data directory.")
