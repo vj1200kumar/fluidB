@@ -292,7 +292,8 @@ func main() {
 				if conn == nil {
 					command, err = line.Prompt("not connected> ")
 				} else {
-					command, err = line.Prompt(addr + "> ")
+					/*command, err = line.Prompt(addr + "> ")*/
+					 command, err = line.Prompt("fluentbase:~>>")
 				}
 			}
 
