@@ -22,7 +22,7 @@ if [ -d ".git" ]; then
 	LDFLAGS="$LDFLAGS -X github.com/tidwall/tile38/core.Version=${VERSION}"
 	LDFLAGS="$LDFLAGS -X github.com/tidwall/tile38/core.GitSHA=${GITSHA}"
 fi
-LDFLAGS="$LDFLAGS -X github.com/tidwall/tile38/core.BuildTime=$(date +%FT%T%z)"
+LDFLAGS="$LDFLAGS -X github.com/gvsafronov/fluentbase/core.BuildTime=$(date +%FT%T%z)"
 
 # Generate the core package
 core/gen.sh
