@@ -1,5 +1,6 @@
 
 
-/fluentbase/internel/server/server- Изменение надписи сервера Tile38 1.9.5
-/fluentbase/cmd/tile38-server/main.go- Изменение рисунка сервера в терминале и Сообщения о порте
-/fluentbase/cmd/tile38-cli/main.go-Изменение слушающего порта 9851
+/fluentbase/internel/server/server- Change server-title: Tile38 1.9.5
+/fluentbase/cmd/tile38-server/main.go- Change picture in terminal and information about port number
+/fluentbase/cmd/tile38-cli/main.go-Change port number from 9851 to 9470
+Deleted Docker support
