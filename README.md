@@ -110,7 +110,7 @@ To set a field when an object already exists:
 
 fluentbase has support to search for objects and points that are within or intersects other objects. All object types can be searched including Polygons, MultiPolygons, GeometryCollections, etc.
 
-<img src="/img/search-within.png" width="200" height="200" border="0" alt="Search Within" align="left">
+<img src="/img/sparse-none.png" width="200" height="200" border="0" alt="Search Within" align="left">
 
 #### Within 
 WITHIN searches a collection for objects that are fully contained inside a specified bounding area.
