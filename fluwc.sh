@@ -1,13 +1,12 @@
 #!/bin/bash
 
-
 SETCOLOR_SUCCESS="echo -en \\033[1;32m"
 SETCOLOR_FAILURE="echo -en \\033[1;31m"
 SETCOLOR_NORMAL="echo -en \\033[0;39m"
 
 echo -e "Loading web-condole..."
 
-# Команда, которую нужно отследить
+# Commands for tracking
 ./fluentbase-server > /dev/null &
 
 curl --data "set fleet truck3 point 33.4762 -112.10923" localhost:9470 
