@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://fluentbase.org"><img src="/img/logo.png" alt="fluiDB"></a>
+  <a href="https://fluidb.org"><img src="/img/logo.png" alt="fluiDB"></a>
 </p>
 <p align="center">
 <a href="https://tile38.com/slack"><img src="https://img.shields.io/badge/slack-channel-orange.svg" alt="Slack Channel"></a>
@@ -7,10 +7,10 @@
 <a href="https://hub.docker.com/r/tile38/tile38"><img src="https://img.shields.io/badge/docker-ready-blue.svg" alt="Docker Ready"></a>
 </p>
 
-Fluentbase is an open source (MIT licensed), in-memory geolocation data store, spatial index, and realtime geofence, distributed uder MIT LICENSE using code of [Tile-38](https://github.com/tidwall/tile38), [Algernon](https://github.com/xyproto/algernon), which also distributed uder MIT LICENSE.  It supports a variety of object types including lat/lon points, bounding boxes, XYZ tiles, Geohashes, and GeoJSON. 
+fluidb is an open source (MIT licensed), in-memory geolocation data store, spatial index, and realtime geofence, distributed uder MIT LICENSE using code of [Tile-38](https://github.com/tidwall/tile38), [Algernon](https://github.com/xyproto/algernon), which also distributed uder MIT LICENSE.  It supports a variety of object types including lat/lon points, bounding boxes, XYZ tiles, Geohashes, and GeoJSON. 
 
 <p align="center">
-<i>This README is quick start document. You can find detailed documentation at <a href="https://fluentbase.org">https://fluentbase.org</a>.</i><br><br>
+<i>This README is quick start document. You can find detailed documentation at <a href="https://fluidb.org">https://fluidb.org</a>.</i><br><br>
 <a href="#searching"><img src="/img/search-nearby.png" alt="Nearby" border="0" width="120" height="120"></a>
 <a href="#searching"><img src="/img/search-within.png" alt="Within" border="0" width="120" height="120"></a>
 <a href="#searching"><img src="/img/search-intersects.png" alt="Intersects" border="0" width="120" height="120"></a>
@@ -20,7 +20,7 @@ Fluentbase is an open source (MIT licensed), in-memory geolocation data store, s
 ## Features
 
 - Spatial index with [search](#searching) methods such as Nearby, Within, and Intersects.
-- Realtime [geofencing](#geofencing) through [webhooks](https://fluentbase.org/commands/sethook) or [pub/sub channels](#pubsub-channels).
+- Realtime [geofencing](#geofencing) through [webhooks](https://fluidb.org/commands/sethook) or [pub/sub channels](#pubsub-channels).
 - Object types of [lat/lon](#latlon-point), [bbox](#bounding-box), [Geohash](#geohash), [GeoJSON](#geojson), [QuadKey](#quadkey), and [XYZ tile](#xyz-tile).
 - Support for lots of [Clients Libraries](#client-libraries) written in many different languages.
 - Variety of protocols, including [http](#http) (curl), [websockets](#websockets), [telnet](#telnet), and the [Redis RESP](http://redis.io/topics/protocol).
@@ -30,19 +30,19 @@ Fluentbase is an open source (MIT licensed), in-memory geolocation data store, s
 - In-memory database that persists on disk.
 
 ## Components
-- `fluentbase-server    ` - The server
-- `fluentbase-cli       ` - Command line interface tool
+- `fluidb-server    ` - The server
+- `fluidb-cli       ` - Command line interface tool
 
 ## Getting Started
 
-### Getting fluentbase
+### Getting fluidb
 
-Perhaps the easiest way to get the latest fluentbase is to use one of the pre-built release binaries which are available for OSX, Linux, FreeBSD, and Windows. Instructions for using these binaries are on the GitHub [releases page](https://github.com/tidwall/fluentbase/releases).
+Perhaps the easiest way to get the latest fluidb is to use one of the pre-built release binaries which are available for OSX, Linux, FreeBSD, and Windows. Instructions for using these binaries are on the GitHub [releases page](https://github.com/tidwall/fluidb/releases).
 
 
-### Building fluentbase 
+### Building fluidb 
 
-fluentbase can be compiled and used on Linux, OSX, Windows, FreeBSD, and probably others since the codebase is 100% Go. We support both 32 bit and 64 bit systems. [Go](https://golang.org/dl/) must be installed on the build machine.
+fluidb can be compiled and used on Linux, OSX, Windows, FreeBSD, and probably others since the codebase is 100% Go. We support both 32 bit and 64 bit systems. [Go](https://golang.org/dl/) must be installed on the build machine.
 
 To build everything simply:
 ```
@@ -57,16 +57,16 @@ $ make test
 ### Running 
 For command line options invoke:
 ```
-$ ./fluentbase-server -h
+$ ./fluidb-server -h
 ```
 
 To run a single server:
 
 ```
-$ ./fluentbase-server
+$ ./fluidb-server
 
-# The fluentbase shell connects to localhost:9470
-$ ./fluentbase-cli
+# The fluidb shell connects to localhost:9470
+$ ./fluidb-cli
 > help
 ```
 
@@ -74,7 +74,7 @@ $ ./fluentbase-cli
 
 Basic operations:
 ```
-$ ./fluentbase-cli
+$ ./fluidb-cli
 
 # add a couple of points named 'truck1' and 'truck2' to a collection named 'fleet'.
 > set fleet truck1 point 33.5123 -112.2693   # on the Loop 101 in Phoenix
@@ -90,7 +90,7 @@ $ ./fluentbase-cli
 > drop fleet                                 # removes all 
 ```
 
-The full list of commands you can found on [full command list](https://fluentbase.org/%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B/).
+The full list of commands you can found on [full command list](https://fluidb.org/%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B/).
 
 ## Fields
 Fields are extra data that belongs to an object. A field is always a double precision floating point. There is no limit to the number of fields that an object can have. 
@@ -108,7 +108,7 @@ To set a field when an object already exists:
 
 ## Searching
 
-fluentbase has support to search for objects and points that are within or intersects other objects. All object types can be searched including Polygons, MultiPolygons, GeometryCollections, etc.
+fluidb has support to search for objects and points that are within or intersects other objects. All object types can be searched including Polygons, MultiPolygons, GeometryCollections, etc.
 
 <img src="/img/search-within.png" width="200" height="200" border="0" alt="Search Within" align="left">
 
@@ -157,9 +157,9 @@ You can choose a value between 1 and 8. The value 1 will result in no more than 
 ## Geofencing
 
 <img src="/img/geofence.gif" width="200" height="200" border="0" alt="Geofence animation" align="left">
-A <a href="https://en.wikipedia.org/wiki/Geo-fence">geofence</a> is a virtual boundary that can detect when an object enters or exits the area. This boundary can be a radius, bounding box, or a polygon. fluentbase can turn any standard search into a geofence monitor by adding the FENCE keyword to the search. 
+A <a href="https://en.wikipedia.org/wiki/Geo-fence">geofence</a> is a virtual boundary that can detect when an object enters or exits the area. This boundary can be a radius, bounding box, or a polygon. fluidb can turn any standard search into a geofence monitor by adding the FENCE keyword to the search. 
 
-*fluentbase also allows for [Webhooks](http://fluentbase.com/commands/sethook) to be assigned to Geofences.*
+*fluidb also allows for [Webhooks](http://fluidb.com/commands/sethook) to be assigned to Geofences.*
 
 <br clear="all">
 
@@ -199,7 +199,7 @@ These can be used when establishing a geofence, to pre-filter responses. For ins
 
 ### Pub/sub channels
 
-fluentbase supports delivering geofence notications over pub/sub channels. 
+fluidb supports delivering geofence notications over pub/sub channels. 
 
 To create a static geofence that sends notifications when a bus is within 200 meters of a point and sends to the `busstop` channel:
 
@@ -256,10 +256,10 @@ A QuadKey used the same coordinate system as an XYZ tile except that the string 
 
 ## Network protocols
 
-It's recommended to use a [client library](#client-libraries) or the [fluentbase CLI](#running), but there are times when only HTTP is available or when you need to test from a remote terminal. In those cases we provide an HTTP and telnet options.
+It's recommended to use a [client library](#client-libraries) or the [fluidb CLI](#running), but there are times when only HTTP is available or when you need to test from a remote terminal. In those cases we provide an HTTP and telnet options.
 
 #### HTTP
-One of the simplest ways to call a fluentbase command is to use HTTP. From the command line you can use [curl](https://curl.haxx.se/). For example:
+One of the simplest ways to call a fluidb command is to use HTTP. From the command line you can use [curl](https://curl.haxx.se/). For example:
 
 ```
 # call with request in the body
@@ -289,18 +289,18 @@ The server will respond in [JSON](http://json.org) or [RESP](http://redis.io/top
 
 ## Client Libraries in most popular languages
 
-fluentbase uses the [Redis RESP](http://redis.io/topics/protocol) protocol natively. Therefore most clients that support basic Redis commands will in turn support fluentbase. Below are a few of the popular clients. 
+fluidb uses the [Redis RESP](http://redis.io/topics/protocol) protocol natively. Therefore most clients that support basic Redis commands will in turn support fluidb. Below are a few of the popular clients. 
 
 - C: [hiredis](https://github.com/redis/hiredis)
 - C#: [StackExchange.Redis](https://github.com/StackExchange/StackExchange.Redis)
 - C++: [redox](https://github.com/hmartiro/redox)
-- Go: [go-redis](https://github.com/go-redis/redis) https://github.com/tidwall/fluentbase/wiki/Go-example-(go-redis)
-- Go: [redigo](https://github.com/gomodule/redigo) (https://github.com/tidwall/fluentbase/wiki/Go-example-(redigo)
-- Node.js: [node-fluentbase](https://github.com/phulst/node-fluentbase) (https://github.com/tidwall/fluentbase/wiki/Node.js-example-(node-fluentbase)
-- Node.js: [node_redis](https://github.com/NodeRedis/node_redis) (https://github.com/tidwall/fluentbase/wiki/Node.js-example-(node-redis)
-- PHP: [tinyredisclient](https://github.com/ptrofimov/tinyredisclient) (https://github.com/tidwall/fluentbase/wiki/PHP-example-(tinyredisclient)
+- Go: [go-redis](https://github.com/go-redis/redis) https://github.com/tidwall/fluidb/wiki/Go-example-(go-redis)
+- Go: [redigo](https://github.com/gomodule/redigo) (https://github.com/tidwall/fluidb/wiki/Go-example-(redigo)
+- Node.js: [node-fluidb](https://github.com/phulst/node-fluidb) (https://github.com/tidwall/fluidb/wiki/Node.js-example-(node-fluidb)
+- Node.js: [node_redis](https://github.com/NodeRedis/node_redis) (https://github.com/tidwall/fluidb/wiki/Node.js-example-(node-redis)
+- PHP: [tinyredisclient](https://github.com/ptrofimov/tinyredisclient) (https://github.com/tidwall/fluidb/wiki/PHP-example-(tinyredisclient)
 - PHP: [phpredis](https://github.com/phpredis/phpredis)
-- Python: [redis-py](https://github.com/andymccurdy/redis-py) (https://github.com/tidwall/fluentbase/wiki/Python-example))
+- Python: [redis-py](https://github.com/andymccurdy/redis-py) (https://github.com/tidwall/fluidb/wiki/Python-example))
 - Scala: [scala-redis](https://github.com/debasishg/scala-redis)
 - Swift: [Redbird](https://github.com/czechboy0/Redbird)
 
@@ -316,4 +316,4 @@ Josh Baker, thank you for sharing your experience and knowledge with me.
 
 ## License
 
-fluentbase source code is available under the MIT [License](/LICENSE).
+fluidb source code is available under the MIT [License](/LICENSE).
