@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://fluidb.org"><img src="/img/logo.png" alt="fluiDB"></a>
+  <a href="https://fluidb.org"><img src="/img/logos.png" alt="fluiDB"></a>
 </p>
 <p align="center">
 <a href="https://tile38.com/slack"><img src="https://img.shields.io/badge/slack-channel-orange.svg" alt="Slack Channel"></a>
