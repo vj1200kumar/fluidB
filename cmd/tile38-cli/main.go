@@ -293,7 +293,7 @@ func main() {
 					command, err = line.Prompt("not connected> ")
 				} else {
 					/*command, err = line.Prompt(addr + "> ")*/
-					 command, err = line.Prompt("fluentbase:~>>")
+					 command, err = line.Prompt("fluidB:~>>")
 				}
 			}
 
