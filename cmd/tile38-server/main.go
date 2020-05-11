@@ -394,10 +394,10 @@ Developer Options:
 	fmt.Fprintf(logw, `
    _______ _______
   |       |       |
-  |____   |   _   |   Fluentbase %s%s %d bit (%s/%s)
+  |____   |   _   |   FluidB %s%s %d bit (%s/%s)
   |       |       |   %sPort: %d, PID: %d
   |____   |   _   | 
-  |       |       |   https://fluentbase.org
+  |       |       |   https://fluidb.icu
   |_______|_______| 
 `+"\n", core.Version, gitsha, strconv.IntSize, runtime.GOARCH, runtime.GOOS, hostd, port, os.Getpid())
 	if pidferr != nil {
