@@ -7,7 +7,7 @@ SETCOLOR_NORMAL="echo -en \\033[0;39m"
 echo -e "Loading web-condole..."
 
 # Commands for tracking
-./fluentbase-server > /dev/null &
+./fluidb-serv > /dev/null &
 
 curl --data "set fleet truck3 point 33.4762 -112.10923" localhost:9470 
 
