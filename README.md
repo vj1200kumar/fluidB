@@ -30,7 +30,7 @@ fluidB is an open source (MIT licensed), in-memory geolocation data store, spati
 - In-memory database that persists on disk.
 
 ## Components
-- `fluidb-server    ` - The server
+- `fluidb-serv    ` - The server
 - `fluidb-cli       ` - Command line interface tool
 
 ## Getting Started
@@ -57,13 +57,13 @@ $ make test
 ### Running 
 For command line options invoke:
 ```
-$ ./fluidb-server -h
+$ ./fluidb-serv -h
 ```
 
 To run a single server:
 
 ```
-$ ./fluidb-server
+$ ./fluidb-serv
 
 # The fluidb shell connects to localhost:9470
 $ ./fluidb-cli
