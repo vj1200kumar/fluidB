@@ -4,7 +4,7 @@ SETCOLOR_SUCCESS="echo -en \\033[1;32m"
 SETCOLOR_FAILURE="echo -en \\033[1;31m"
 SETCOLOR_NORMAL="echo -en \\033[0;39m"
 
-echo -e "Loading web-condole..."
+echo -e "Loading web-console..."
 
 # Commands for tracking
 ./fluidb-serv > /dev/null &
