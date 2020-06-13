@@ -292,7 +292,7 @@ func main() {
 				if conn == nil {
 					command, err = line.Prompt("not connected> ")
 				} else {
-					/*command, err = line.Prompt(addr + "> ")*/
+					fmt.Fprintf(os.Stdout, "\n")
 					 command, err = line.Prompt("fluidB:~>>")
 				}
 			}
