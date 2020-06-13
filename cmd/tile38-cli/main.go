@@ -132,7 +132,7 @@ func parseArgs() bool {
 }
 
 func refusedErrorString(addr string) string {
-	return fmt.Sprintf("Could not connect to Tile38 at %s: Connection refused", addr)
+	return fmt.Sprintf("Could not connect to fluidB at %s: Connection refused", addr)
 }
 
 var groupsM = make(map[string][]string)
