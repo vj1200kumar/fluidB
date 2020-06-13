@@ -132,7 +132,7 @@ func Serve(host string, port int, dir string, http bool) error {
 	if core.QueueFileName == "" {
 		core.QueueFileName = path.Join(dir, "queue.db")
 	}
-	log.Infof("Server started, fluidb version %s, git %s", core.Version, core.GitSHA)
+	log.Infof("Server started, fluidB version %s, git %s", core.Version, core.GitSHA)
 
 	// Initialize the server
 	server := &Server{
