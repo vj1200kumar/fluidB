@@ -1064,7 +1064,7 @@ func (server *Server) command(msg *Message, client *Client) (
 		}
 	case "client":
 		res, err = server.cmdClient(msg, client)
-	case "eval", "evalro", "evalna":
+/*	case "eval", "evalro", "evalna":
 		res, err = server.cmdEvalUnified(false, msg)
 	case "evalsha", "evalrosha", "evalnasha":
 		res, err = server.cmdEvalUnified(true, msg)
@@ -1074,7 +1074,7 @@ func (server *Server) command(msg *Message, client *Client) (
 		res, err = server.cmdScriptExists(msg)
 	case "script flush":
 		res, err = server.cmdScriptFlush(msg)
-	case "subscribe":
+*/	case "subscribe":
 		res, err = server.cmdSubscribe(msg)
 	case "psubscribe":
 		res, err = server.cmdPsubscribe(msg)
