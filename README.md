@@ -14,7 +14,7 @@ fluidB is an open source (MIT licensed), in-memory geolocation data store, spati
 <a href="#searching"><img src="/img/search-nearby.png" alt="Nearby" border="0" width="120" height="120"></a>
 <a href="#searching"><img src="/img/search-within.png" alt="Within" border="0" width="120" height="120"></a>
 <a href="#searching"><img src="/img/search-intersects.png" alt="Intersects" border="0" width="120" height="120"></a>
-<a href="https://fluentbase.org/topics/roaming-geofences"><img src="/img/roaming.gif" alt="Roaming Geofences" border="0" width="120" height="120"></a>
+<a href="https://fluidb.icu/topics/roaming-geofences"><img src="/img/roaming.gif" alt="Roaming Geofences" border="0" width="120" height="120"></a>
 </p>
 
 ## Features
@@ -31,7 +31,7 @@ fluidB is an open source (MIT licensed), in-memory geolocation data store, spati
 
 ## Components
 - `fluidb-serv    ` - The server
-- `fluidb-cli       ` - Command line interface tool
+- `clif       ` - Command line interface tool
 
 ## Getting Started
 
@@ -66,7 +66,7 @@ To run a single server:
 $ ./fluidb-serv
 
 # The fluidb shell connects to localhost:9470
-$ ./fluidb-cli
+$ ./clif
 > help
 ```
 
@@ -74,7 +74,7 @@ $ ./fluidb-cli
 
 Basic operations:
 ```
-$ ./fluidb-cli
+$ ./clif
 
 # add a couple of points named 'truck1' and 'truck2' to a collection named 'fleet'.
 > set fleet truck1 point 33.5123 -112.2693   # on the Loop 101 in Phoenix
